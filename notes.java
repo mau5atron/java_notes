@@ -117,3 +117,53 @@ public class Animal {
 	}	
 }
 
+
+
+
+
+
+
+// It is good to use getter and setter methods so that you can protect
+	//  your data
+// In Eclipse right click => Source => Generate getter and setters 
+
+public String getName(){
+	return name;
+}
+
+public void setName(String name){
+	this.name = name;
+}
+
+public int getWeight(){
+	return weight;
+}
+
+public void setWeight(int weight){
+	this.weight = weight;
+}
+
+public boolean isHasOwner(){
+	return hasOwner;
+}
+
+public void setHasOwner(boolean hasOwner){
+	this.hasOwner = hasOwner;
+}
+
+public byte getAge(){
+	return age;
+}
+
+public void setAge(byte age){
+	this.age = age;
+}
+
+public long getUniqueID(){
+	return uniqueID;
+}
+
+
+
+
+
