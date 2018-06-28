@@ -388,6 +388,76 @@ protected static String printNumbers(int maxNumbers){
 		System.out.println("Animal says" + randAnimal.makeSound());
 	}
 
+	// public allows other classes to use this method 
+	// static means that only a class can call for this to execute 
+	// void means it doesn't return a value when it finishes executing 
+	// This method can accept Strings that can be stored in the String array args
+		// when it is executed
+
+	public static void main (String[] args){
+		Animal theDog = new Animal();
+
+		System.out.println("The animal's name is " + theDog.getName());
+
+		System.out.println(Animal.printNumbers(100));
+
+		Animal.countTo(100);
+
+		Animal.guessMyNumber();
+
+		// An array is a fixed series of boxes that contain multiple values of 
+			// the same data type 
+		// How you create arrays 
+		// int[] favoriteNumbers;
+		// favoriteNumbers = new int[20];
+
+		int[] favoriteNumbers = new int[20];
+
+		favoriteNumbers[0] = 100;
+
+		String[] stringArray = {"Random", "Words", "Here"};
+
+		// for(dataType[] varForNow) : arrayName)
+		for(String word : stringArray){
+			System.out.println(word);
+		}
+
+		// this is a multidemnsional array 
+		// ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		String[][][] arrayName = {
+			{
+				{"000"}, 
+				{"100"}, 
+				{"200"}, 
+				{"300"}
+			},
+			{
+				{"010"},
+				{"110"},
+				{"210"},
+				{"310"}
+			}, 
+			{
+				{"020"},
+				{"120"},
+				{"220"},
+				{"320"}
+			}
+		};
+		// ~~~~~~~~~~~~~~~~~~~~~~~~~~
+		for(int i = 0; i < arrayName.length; i++){
+			for(int j = 0; j < arrayName[i].length; j++){
+				for(int k = 0; k < arrayName[i][j].length; k++){
+					System.out.print("| " + arrayName[i][j][k] + " ");
+				}
+			}
+			System.out.println("|"); 
+		}
+
+
+
+	}
+
 } 
 
 
