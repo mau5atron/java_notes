@@ -311,3 +311,100 @@ public void setFavoriteChar(){
 
 
 
+public double getSpeed(){
+	return speed;
+}
+
+public void setSpeed(double speed){
+	this.speed = speed;
+}
+
+public float getHeight(){
+	return height;
+}
+
+public void setHeight(float height){
+	return numberOfAnimals;
+}
+
+
+
+// Since numberOfAnimals is Static you must set the value using the class name
+public void setNumberOfAnimals(int numberOfAnimals){
+	Animal.numberOfAnimals = numberOfAnimals;
+}
+
+protected static void countTo(int startingNumber){
+	for(int 1 = startingNumber; i <= 100; i++){
+		// continue is used to skip 1 iteration of the loop
+		if(i == 90)continue;
+		System.out.println(i);
+	}
+}
+
+protected static String printNumbers(int maxNumbers){
+	int i = 1;
+	while(i < (maxNumbers / 2)){
+		System.out.println(i);
+		i++;
+
+		// This is not needed, but if you want to jump out of a loop use break
+		if(i == (maxNumbers/2)) break;
+
+		Animal.countTo(maxNumbers/2);
+
+		// You can return a value like this
+		return "End of printNumbers()";
+	}
+
+	protected static void guessMyNumber(){
+		int number;
+
+
+		// Do while loops are used when you want to execute the code in the braces at least once;
+
+		do {
+			System.out.println("Guess my number up to 100");
+
+			// If the input entered is not a number send a warning 
+			while(!userInput.hasNextInt()){
+				String numberEntered = userInput.next();
+				System.out.printf("%s is not a number\n", numberEntered);
+			}
+			number = userInput.nextInt();
+		} while(number != 50);
+		System.out.println("Yes the number was 50");
+	}
+
+	// This will be used to demonstrate polymorphism
+
+	public String makeSound(){
+		return "uwu";
+	}
+
+	// With polymorphism we can refer to any Animal and yet use overriden methods
+		// in the specific animal type
+	public static void speakAnimal(Animal randAnimal){
+		System.out.println("Animal says" + randAnimal.makeSound());
+	}
+
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
