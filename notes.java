@@ -243,6 +243,68 @@ public void setFavoriteChar(){
 	} else {
 		System.out.println("Favorite character set to: " + this.favoriteChar);
 	}
+
+
+
+
+
+
+
+	// Logical operators 
+
+	// ! : converts the boolean value to its right to its opposite 
+		// from: true => false
+
+	// & : Returns true if boolean value on the right and left are both true
+		// (always evaluates both boolean values)
+	// && (and) : Returns true if boolean value on the right and left are both true
+		// (stops evaluating after first false)
+	// | (or) : Returns true if either boolean value on the right or left are true 
+		// (stops evaluating after first true)
+	// ^ : Returns true if there is 1 true and 1 false boolean value on the right or left
+
+
+	if((randomNumber > 97) && (randomNumber < 122)){
+		System.out.println("Favorite character is a lowercase letter");
+	}	
+
+	if(((randomNumber > 97) && (randomNumber < 122)) || ((randomNumber > 64) && (randomNumber < 91))){
+		System.out.println("I turned false to " + !false);
+	}
+
+	if(!false){
+		System.out.println("I turned false to " + !false);
+	}
+
+	// The ternary operator assigns one or another value based on a condition 
+	int whichIsBigger = (50 > randomNumber) ? 50 : randomNumber;
+
+	System.out.println("The biggest number is " + whichIsBigger);
+
+	
+
+	// The switch statement is great for when you have a limited number of values
+		// and the values are int, byte, or char unless you have Java 7 which allows strings
+
+	switch(randomNumber){
+		case 8 : 
+		System.out.println("Favorite character set to: Backspace");
+		break;
+
+		case 9 : 
+		System.out.println("Favorite character set to: Horizontal tab");
+		break;
+
+		case 10 : 
+		case 11 : 
+		case 12 : 
+			System.out.println("Favorite character set to: Something else weird");
+		break;
+
+		default : 
+			System.out.println("Favorite character set to: " + this.favoriteChar);
+		break;
+	}
 }
 
 
