@@ -454,7 +454,15 @@ protected static String printNumbers(int maxNumbers){
 			System.out.println("|"); 
 		}
 
+		// Different ways to print out the array 
+		// You can copy an array (stringToCopy, indexes to copy)
+		String[] cloneOfArray = Arrays.copyOf(stringArray, 3);
 
+		// You can print out the whole array 
+		System.out.println(Arrays.toString(cloneOfArray));
+
+		// Returns the index or a negative number
+		System.out.println(Arrays.binarySearch(cloneOfArray, "Random"));
 
 	}
 
