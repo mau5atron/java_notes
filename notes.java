@@ -167,3 +167,63 @@ public long getUniqueID(){
 
 
 
+
+
+// Method overloading allows you to accept different input with the same 
+// method name
+
+
+public void setUniqueID(long uniqueID){
+	this.uniqueID = uniqueID;
+	System.out.println("Unique ID set to: " + this.uniqueID);
+}
+
+public void setUniqueID(){
+	long minNumber = 1;
+	long maxNumber = 100000;
+
+
+	// generates a random number between 1 and 100000
+	this.uniqueID = minNumber + (long)(Math.random() * ((maxNumber - minNumber) + 1));
+
+
+	// You can cast from one primitive value into another by putting what you want
+		// between ( )
+
+	// (byte) (short) (long) (double)
+	// (float), (boolean) & (char) don't work
+	// (char) stays as a number instead of a character 
+
+	// You convert from a primitive to a string like
+	String stringNumber = Long.toString(maxNumber);
+
+
+	// Byte.toString(bigByte); 
+	// Short.toString(bigShort);
+	// Integer.toString(bigInt);
+	// Float.toString(bigFloat);
+	// Double.toString(bigDouble);
+	// Boolean.toString(trueOrFalse);
+	
+
+
+	// You convert from a String to a primitive like this.
+	int numberString = Integer.parseInt(stringNumber);
+
+
+	// parseShort
+	// parseLong
+	// parseByte
+	// parseFloat 
+	// parseDouble
+	// parseBoolean
+	System.out.println("Unique ID set to: " + this.uniqueID);
+}
+
+
+
+
+
+
+
+
