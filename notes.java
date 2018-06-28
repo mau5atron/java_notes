@@ -221,7 +221,29 @@ public void setUniqueID(){
 }
 
 
+public char getFavoriteChar(){
+	return favoriteChar;
+}
 
+public void setFavoriteChar(char favoriteChar){
+	this.favoriteChar = favoriteChar;
+}
+
+public void setFavoriteChar(){
+	int randomNumber = (int) (Math.random() * 126) + 1;
+	this.favoriteChar = (char) randomNumber;
+
+
+	// if then else statement
+	// > < == != >= <= 
+	if(randomNumber == 32){
+		System.out.println("Favorite character set to: Space");
+	} else if(randomNumber == 10){
+		System.out.println("Favorite character set to: New Line");
+	} else {
+		System.out.println("Favorite character set to: " + this.favoriteChar);
+	}
+}
 
 
 
