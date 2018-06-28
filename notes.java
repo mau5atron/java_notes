@@ -465,7 +465,6 @@ protected static String printNumbers(int maxNumbers){
 		System.out.println(Arrays.binarySearch(cloneOfArray, "Random"));
 
 	}
-
 } 
 
 
