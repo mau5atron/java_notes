@@ -53,7 +53,47 @@ public class Animal {
 
 
 
-	
+	// Static variables have the same value for every object
+	// Any variable or function that does not make sense for an obejct
+		// to have should be made static
+
+	// Protected means tha this value can only be accessed by other code 
+		// in the same package
+	// or by subclasses in other packages 
+	protected static int numberOfAnimals = 0;
+
+	// A scanner object allows you to accept user input from the keyboard
+	static Scanner userInput = new Scanner(System.in);
+
+	// Any time an Animal object is created this function called the constructor
+		//  is called
+
+	// initialize the Animal object with the line below
+	public Animal(){
+		// Shorthand for numberOfAnimals = numberOfAnimals + 1;
+		numberOfAnimals++;
+
+		int sumOfNumbers = 5 + 1;
+		System.out.println("5 + 1 = " + sunOfNumbers);
+
+		int diffOfNumbers = 5 - 1;
+		System.out.println("5 - 1 = " + diffOfNumbers);
+
+		int multOfNumbers = 5 * 1;
+		System.out.println("5 * 1 = " + multOfNumbers);
+
+		int divOfNumbers = 5 / 1;
+		System.out.println("5 / 1 = " + divOfNumbers);
+
+		int modOfNumbers = 5 % 3;
+		System.out.println("5 % 3 = " + modOfNumbers);
 
 
+
+
+
+		// Print is used to print to the screen, but it does not
+			//  end with a newline \n
+		System.out.print("Enter the name: \n");
+	}	
 }
