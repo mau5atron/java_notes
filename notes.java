@@ -95,5 +95,25 @@ public class Animal {
 		// Print is used to print to the screen, but it does not
 			//  end with a newline \n
 		System.out.print("Enter the name: \n");
+
+		// The 'if' statement performs the actions between the {} if the condition
+			// is true
+
+		// userInput.hasNextLine(); returns true if a String was entered in the keyboard
+
+		if(userInput.hasNextLine()){
+
+			// 'this' provides you with a way to refer to the object itself
+			// userInput.nextLine() returns the value that was entered at the keyboard
+
+			this.setName(userInput.nextLine());
+
+			// hasNextInt, hasNextFloat, hasNextDouble, hasNextBoolean, 
+				// hasNextByte, hasNextLong, nextInt, nextDouble, nextFloat, nextBoolean, etc.
+		}
+
+		this.setFavoriteChar();
+		this.setUniqueID();
 	}	
 }
+
